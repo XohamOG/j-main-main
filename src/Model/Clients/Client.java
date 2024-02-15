@@ -25,10 +25,26 @@ package Model.Clients;
  *
  */
 public class Client {
+
+    private static int client_count=0;
+    int client_id;
     String client_name;
     String client_email;
     int client_age;
     String client_gender; 
+
+
+    
+    public static int getClient_count()
+    {
+        return client_count;
+    }
+
+    public Client()
+    {
+        client_count++;
+        this.setClient_email(client_count);
+    }
 
 
     public void setClient_name(String client_name) {
